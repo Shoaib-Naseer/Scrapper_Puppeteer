@@ -37,17 +37,24 @@ async function run() {
   //Now Loop through all the links and open one by one
   for (let i = 0; i < urls.length; i++) {
     let items = [];
+    //conacating the urls
     let uri = 'https://www.germanfinecars.com' + urls[i].url;
-    console.log(uri);
+
     await page.goto(uri, { waitUntil: 'networkidle2' });
     // await page.waitForTimeout(3000)
     let item = new_items;
     //saving url into object
-    item.url = urls[i].url;
-
+    item.url = urls[i].uri;
     //Click on Spec to get all the specifications
     const spec = await page.$x(`//h3[contains(text(),'Specs')]`);
     await spec[0].click();
+
+    //get price from xpath
+    try {
+      let [price] = await page.$x(`//span[contains(text(),'Price')]`);
+      item.Price = await page.evaluate((el) => el.textContent, price);
+      item.Price = sanitizeInt(item.Price);
+    } catch (error) {}
 
     //get year from xpath
     try {
