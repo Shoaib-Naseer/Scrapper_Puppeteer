@@ -1,6 +1,6 @@
-2023/03/01-12:40:20.157 e10 Reusing MANIFEST D:\BXTrack\German-Cars-Scrapper\data\Default\Session Storage/MANIFEST-000001
-2023/03/01-12:40:20.158 e10 Recovering log #4
-2023/03/01-12:40:20.159 e10 Reusing old log D:\BXTrack\German-Cars-Scrapper\data\Default\Session Storage/000004.log 
-2023/03/01-12:41:59.723 259c Level-0 table #8: started
-2023/03/01-12:41:59.730 259c Level-0 table #8: 59286 bytes OK
-2023/03/01-12:41:59.736 259c Delete type=0 #4
+2023/03/01-13:03:15.278 4310 Reusing MANIFEST D:\BXTrack\German-Cars-Scrapper\data\Default\Session Storage/MANIFEST-000001
+2023/03/01-13:03:15.279 4310 Recovering log #7
+2023/03/01-13:03:15.280 4310 Reusing old log D:\BXTrack\German-Cars-Scrapper\data\Default\Session Storage/000007.log 
+2023/03/01-13:05:28.260 2730 Level-0 table #11: started
+2023/03/01-13:05:28.267 2730 Level-0 table #11: 57445 bytes OK
+2023/03/01-13:05:28.273 2730 Delete type=0 #7

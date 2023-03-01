@@ -44,15 +44,15 @@ async function run() {
     // await page.waitForTimeout(3000)
     let item = new_items;
     //saving url into object
-    item.url = urls[i].uri;
+    item.url = uri;
     //Click on Spec to get all the specifications
     const spec = await page.$x(`//h3[contains(text(),'Specs')]`);
     await spec[0].click();
 
     //get price from xpath
     try {
-      let [price] = await page.$x(`//span[contains(text(),'Price')]`);
-      item.Price = await page.evaluate((el) => el.textContent, price);
+      let [price] = await page.$x(`//h2[@class='price']`);
+      item.Price = await page.evaluate((el) => el.innerText, price);
       item.Price = sanitizeInt(item.Price);
     } catch (error) {}
 
